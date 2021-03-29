@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "header_menus",
+  "info": {
+    "name": "headerMenu",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "menuItem": {
+      "type": "component",
+      "repeatable": false,
+      "component": "menu-item.menu-item"
+    }
+  }
+}

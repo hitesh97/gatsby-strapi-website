@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_menu_item_menu_items",
+  "info": {
+    "name": "menuItem",
+    "icon": "asterisk",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "index": {
+      "type": "integer",
+      "unique": true
+    }
+  }
+}
