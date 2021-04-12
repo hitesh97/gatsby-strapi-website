@@ -1,4 +1,5 @@
 import React from 'react'
+import { Article } from '../typings'
 import Card from './Card'
 
 interface ArticlesProps {
@@ -6,10 +7,6 @@ interface ArticlesProps {
 }
 
 const Articles: React.FC<ArticlesProps> = ({ articles }) => {
-  console.log('------ articles -----')
-  console.log(articles)
-  console.log('------ articles -----')
-
   const leftArticlesCount = Math.ceil(articles.length / 5)
   const leftArticles = articles.slice(0, leftArticlesCount)
   const rightArticles = articles.slice(leftArticlesCount, articles.length)

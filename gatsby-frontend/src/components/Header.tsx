@@ -5,6 +5,7 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 
 import { heights, dimensions, colors } from '../styles/variables'
 import Container from './Container'
+import HeaderMenu from './HeaderMenu'
 
 interface categoryInterface {
   node: {
@@ -38,21 +39,13 @@ const HomepageLink = styled(Link)`
   }
 `
 
-interface HeaderProps {
-  title?: string
-}
+interface HeaderProps {}
 
-const Header: React.FC<HeaderProps> = ({ title }) => (
+const Header: React.FC<HeaderProps> = ({}) => (
   <div>
     <div>
       <nav className="uk-navbar-container" data-uk-navbar>
-        <div className="uk-navbar-left">
-          <ul className="uk-navbar-nav">
-            <li>
-              <Link to="/">Strapi Blog</Link>
-            </li>
-          </ul>
-        </div>
+        <HeaderMenu />
 
         <div className="uk-navbar-right">
           <ul className="uk-navbar-nav">

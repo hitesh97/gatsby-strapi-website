@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_section_sections",
+  "info": {
+    "name": "section",
+    "icon": "dice-one"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "intro": {
+      "type": "richtext"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "heroImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "sectionType": {
+      "type": "enumeration",
+      "enum": [
+        "header",
+        "footer",
+        "contentLeft",
+        "contentRight",
+        "mediaFullWwidth",
+        "mediaNone"
+      ]
+    }
+  }
+}

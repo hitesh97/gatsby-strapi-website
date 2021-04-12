@@ -18,7 +18,7 @@
     },
     "url": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "active": {
       "type": "boolean",
@@ -28,6 +28,9 @@
     "index": {
       "type": "integer",
       "unique": true
+    },
+    "page": {
+      "model": "page"
     }
   }
 }

@@ -103,6 +103,18 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        sitePages:  allStrapiHeaderMenu {
+          edges {
+            node {
+              strapiId
+              menuItem {
+                page {
+                  slug
+                }
+              }
+            }
+          }
+        }
       }
     `
   )
@@ -114,6 +126,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create blog articles pages.
   const articles = result.data.articles.edges
   const categories = result.data.categories.edges
+  const sitePages = result.data.sitePages.edges
 
   articles.forEach((article, index) => {
     createPage({
@@ -131,6 +144,16 @@ exports.createPages = async ({ graphql, actions }) => {
       component: require.resolve('./src/templates/category.tsx'),
       context: {
         id: category.node.strapiId
+      }
+    })
+  })
+
+  sitePages.forEach((sitePage, index) => {
+    createPage({
+      path: `/${sitePage.node.menuItem.page.slug}`,
+      component: require.resolve('./src/templates/sitePage.tsx'),
+      context: {
+        slug: sitePage.node.menuItem.page.slug
       }
     })
   })
