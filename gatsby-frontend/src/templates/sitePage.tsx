@@ -51,7 +51,11 @@ const SitePage: React.FC<CategoryProps> = ({ data }) => {
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <h1>{pageTitle}</h1>
-          <ReactMarkdown plugins={[gfm]} children={pageSubtitle} renderers={{ h1: 'h2', em: 'li' }} />
+          <ReactMarkdown
+            plugins={[gfm]}
+            children={pageSubtitle}
+            renderers={{ em: props => <li {...props}>hello world</li>, paragraph: props => props.children }}
+          />
           <ReactMarkdown plugins={[gfm]} children={content} />
         </div>
       </div>
