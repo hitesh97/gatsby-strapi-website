@@ -124,7 +124,7 @@ const SiteHeader: FunctionComponent<{ isSticky?: boolean }> = ({ isSticky = fals
             render={data => {
               const menuItems = data.allStrapiCategory.edges.map((category: categoryInterface, i: number) => {
                 return (
-                  <li key={category.node.strapiId} style={{ marginLeft: '15px' }}>
+                  <li key={`cat-${category.node.strapiId}`} style={{ marginLeft: '15px' }}>
                     <Link to={`/category/${category.node.strapiId}`}>{category.node.name}</Link>
                   </li>
                 )
@@ -132,7 +132,7 @@ const SiteHeader: FunctionComponent<{ isSticky?: boolean }> = ({ isSticky = fals
 
               const pageMenuItems = data.allStrapiHeaderMenu.edges.map((headerMenu: headerMenuInterface) => {
                 return (
-                  <li key={headerMenu.node.menuItem.id} style={{ marginLeft: '15px' }}>
+                  <li key={`head-${headerMenu.node.menuItem.id}`} style={{ marginLeft: '15px' }}>
                     <Link to={`/${headerMenu.node.menuItem.page.slug}`}>{headerMenu.node.menuItem.title}</Link>
                   </li>
                 )

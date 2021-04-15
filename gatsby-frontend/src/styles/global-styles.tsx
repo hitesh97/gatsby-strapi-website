@@ -5,10 +5,18 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     background: white;
-    color: ${props => props.theme.colors.blue};
+    color: ${props => props.theme.colors.defaultBG};
+    font-family: /*iOS*/ "AvenirNextCondensed-Bold", "Futura-CondensedExtraBold",
+    /*MacOSX*/ HelveticaNeue-CondensedBold, /*Ubuntu*/ "Ubuntu Condensed",
+    "Liberation Sans Narrow", /*Windows*/ "Franklin Gothic Demi Cond",
+    "Arial Narrow", /*Android*/ sans-serif-condensed, /*Fallback*/ Arial,
+    "Trebuchet MS", "Lucida Grande", Tahoma, Verdana, sans-serif;
+  }
+  h1 {
+    line-height: 3.5rem;
   }
   html {
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
   }
 `
 

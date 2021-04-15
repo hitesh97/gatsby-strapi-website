@@ -151,7 +151,7 @@ exports.createPages = async ({ graphql, actions }) => {
   sitePages.forEach((sitePage, index) => {
     createPage({
       path: `/${sitePage.node.menuItem.page.slug}`,
-      component: require.resolve('./src/templates/sitePage.tsx'),
+      component: require.resolve('./src/templates/pageTemplate.tsx'),
       context: {
         slug: sitePage.node.menuItem.page.slug
       }

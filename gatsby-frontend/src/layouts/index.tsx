@@ -60,6 +60,7 @@ const IndexLayout: React.FC<Props> = ({ children }) => (
           <div>
             <h1>{data.site.siteMetadata.title}</h1>
             <ArticlesComponent articles={data.allStrapiArticle.edges} />
+            hello world
           </div>
         </div>
       </LayoutRoot>

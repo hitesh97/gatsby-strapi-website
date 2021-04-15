@@ -10,11 +10,11 @@ declare namespace React {
   }
 }
 
-declare module 'styled-components' {
+/* declare module 'styled-components' {
   export interface DefaultTheme {
     [key: string]: any | DefaultTheme
   }
-}
+} */
 
 // Add support for svg imports
 declare module '*.svg' {
