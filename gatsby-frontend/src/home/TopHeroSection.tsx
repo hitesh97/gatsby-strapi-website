@@ -1,20 +1,12 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+
 import React from 'react'
 import { Box, Flex, Button, Text } from 'rebass'
 // import  styled from 'styled-components'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 interface TopHeroSectionProps {}
-
-const StyledBox = styled(Box)`
-  background-color: ${props => props.theme.colors.defaultBG};
-`
-const StyledButton = styled(Button)`
-  background-color: ${props => props.theme.colors.defaultBG};
-  margin-top: '20px';
-  color: 'white';
-  font-weight: '300';
-  font-family: "'PT Sans', system-ui, sans-serif";
-`
 
 class TopHeroSection extends React.Component<TopHeroSectionProps, {}> {
   public render() {
@@ -49,11 +41,12 @@ class TopHeroSection extends React.Component<TopHeroSectionProps, {}> {
               textAlign: 'left'
             }}
           >
-            <StyledBox
+            <Box
               sx={{
                 width: '420px',
                 minHeight: '420px',
-                marginLeft: '20px'
+                marginLeft: '20px',
+                backgroundColor: 'secondary'
               }}
             >
               <Box sx={{ paddingLeft: '30px' }}>
@@ -74,11 +67,22 @@ class TopHeroSection extends React.Component<TopHeroSectionProps, {}> {
                   <br />
                   Web solutions that are beautiful + functional.
                 </Text>
-                <StyledButton variant="outline" sx={{}} as="a" href="about-us">
+                <Button
+                  variant="outline"
+                  sx={{
+                    marginTop: '20px',
+                    color: 'white',
+                    fontWeight: '300',
+                    fontFamily: "'PT Sans', system-ui, sans-serif",
+                    backgroundColor: 'primary'
+                  }}
+                  as="a"
+                  href="about-us-page"
+                >
                   Find out more
-                </StyledButton>
+                </Button>
               </Box>
-            </StyledBox>
+            </Box>
           </Box>
         </Flex>
       </Box>

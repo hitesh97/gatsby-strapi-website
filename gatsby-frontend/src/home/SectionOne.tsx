@@ -1,7 +1,9 @@
-import React from "react";
-import { Box, Flex, Button, Text } from "rebass";
-import { FaPalette, FaPencilRuler, FaRegPaperPlane } from "react-icons/fa";
-import SectionOneTile from "./SectionOneTile";
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import React from 'react'
+import { Box, Flex, Button, Text } from 'rebass'
+import { FaPalette, FaPencilRuler, FaRegPaperPlane } from 'react-icons/fa'
+import SectionOneTile from './SectionOneTile'
 
 interface SectionOneProps {}
 
@@ -10,28 +12,28 @@ class SectionOne extends React.Component<SectionOneProps, {}> {
     return (
       <Box
         sx={{
-          display: "grid",
+          display: 'grid',
           gridTemplateAreas: ['"main"', '"marginLeft" "main" "marginRight"'],
-          gridTemplateColumns: ["1fr", "1fr"],
-          marginBottom: "40px",
-          marginTop: "40px",
+          gridTemplateColumns: ['1fr', '1fr'],
+          marginBottom: '40px',
+          marginTop: '40px'
         }}
       >
         <Box
           sx={{
-            gridArea: "main",
-            margin: "auto",
+            gridArea: 'main',
+            margin: 'auto'
           }}
         >
           <Box
             sx={{
-              display: "grid",
+              display: 'grid',
               gridTemplateAreas: [
                 '"leftMain" "centerMain" "rightMain"',
                 '"leftMain" "centerMain" "rightMain"',
-                '"leftMain centerMain rightMain"',
+                '"leftMain centerMain rightMain"'
               ],
-              gridTemplateColumns: ["1fr", "1fr", "1fr 1fr 1fr"],
+              gridTemplateColumns: ['1fr', '1fr', '1fr 1fr 1fr']
             }}
           >
             <SectionOneTile
@@ -39,7 +41,7 @@ class SectionOne extends React.Component<SectionOneProps, {}> {
               tileIcon={<FaPencilRuler size="44" />}
               tileHeading="ECommerce"
               tileContent={
-                <ul style={{ listStyle: "circle" }}>
+                <ul style={{ listStyle: 'circle' }}>
                   <li>Front & Back-end for Ecommerce</li>
                   <li>Woo-Commerce, Shopify</li>
                   <li>Content Managed ECommerce</li>
@@ -53,7 +55,7 @@ class SectionOne extends React.Component<SectionOneProps, {}> {
               tileIcon={<FaRegPaperPlane size="44" />}
               tileHeading="Web Design"
               tileContent={
-                <ul style={{ listStyle: "circle" }}>
+                <ul style={{ listStyle: 'circle' }}>
                   <li>Responsive design and Mobile first approach</li>
                   <li>User Interface Design</li>
                   <li>User Experience Design</li>
@@ -68,7 +70,7 @@ class SectionOne extends React.Component<SectionOneProps, {}> {
               tileIcon={<FaPalette size="44" />}
               tileHeading="Web Development"
               tileContent={
-                <ul style={{ listStyle: "circle" }}>
+                <ul style={{ listStyle: 'circle' }}>
                   <li>Cross Browser Web and Application</li>
                   <li>CMS Development</li>
                   <li>Custom Applications</li>
@@ -83,17 +85,17 @@ class SectionOne extends React.Component<SectionOneProps, {}> {
         </Box>
         <Box
           sx={{
-            gridArea: "marginLeft",
+            gridArea: 'marginLeft'
           }}
         ></Box>
         <Box
           sx={{
-            gridArea: "marginRight",
+            gridArea: 'marginRight'
           }}
         ></Box>
       </Box>
-    );
+    )
   }
 }
 
-export default SectionOne;
+export default SectionOne

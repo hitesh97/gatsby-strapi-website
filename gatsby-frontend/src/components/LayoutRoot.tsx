@@ -1,8 +1,8 @@
 import * as React from 'react'
 import Seo from './Seo'
 // import Header from './Header'
-import { ThemeProvider } from 'styled-components'
-import { theme, GlobalStyles } from '../styles'
+// import { ThemeProvider } from 'styled-components'
+import { GlobalStyles } from '../styles'
 import { Box } from 'rebass'
 import SiteHeader from './SiteHeader'
 import SiteFooter from './SiteFooter'
@@ -13,7 +13,7 @@ interface LayoutRootProps {
 }
 
 const LayoutRoot: React.FC<LayoutRootProps> = ({ children }) => (
-  <ThemeProvider theme={theme()}>
+  <>
     <Box
       sx={{
         display: 'flex',
@@ -37,7 +37,7 @@ const LayoutRoot: React.FC<LayoutRootProps> = ({ children }) => (
         <SiteFooter />
       </Box>
     </Box>
-  </ThemeProvider>
+  </>
 )
 
 export default LayoutRoot

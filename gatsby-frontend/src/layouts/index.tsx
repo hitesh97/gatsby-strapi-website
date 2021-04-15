@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import 'modern-normalize'
+// import 'modern-normalize'
 import LayoutRoot from '../components/LayoutRoot'
 import ArticlesComponent from '../components/Articles'
 import { Article } from '../typings'

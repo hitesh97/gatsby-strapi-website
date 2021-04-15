@@ -5,7 +5,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     background: white;
-    color: ${props => props.theme.colors.defaultBG};
     font-family: /*iOS*/ "AvenirNextCondensed-Bold", "Futura-CondensedExtraBold",
     /*MacOSX*/ HelveticaNeue-CondensedBold, /*Ubuntu*/ "Ubuntu Condensed",
     "Liberation Sans Narrow", /*Windows*/ "Franklin Gothic Demi Cond",

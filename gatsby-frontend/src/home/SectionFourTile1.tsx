@@ -1,8 +1,10 @@
-import React from "react";
-import { Box, Flex, Button, Text, Image } from "rebass";
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import React from 'react'
+import { Box, Flex, Button, Text, Image } from 'rebass'
 
 interface SectionFourTile1Props {
-  imgUrl: string;
+  imgUrl: string
 }
 
 class SectionFourTile1 extends React.Component<SectionFourTile1Props, {}> {
@@ -10,21 +12,21 @@ class SectionFourTile1 extends React.Component<SectionFourTile1Props, {}> {
     return (
       <Box
         sx={{
-          height: "100%",
+          height: '100%'
         }}
       >
         <Image
           src={this.props.imgUrl}
           sx={{
-            width: "100%",
-            height: "100%",
-            objectPosition: "50% 0%",
-            backgroundPosition: "50% 0%",
+            width: '100%',
+            height: '100%',
+            objectPosition: '50% 0%',
+            backgroundPosition: '50% 0%'
           }}
         />
       </Box>
-    );
+    )
   }
 }
 
-export default SectionFourTile1;
+export default SectionFourTile1

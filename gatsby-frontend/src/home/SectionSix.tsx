@@ -1,7 +1,9 @@
-import React from "react";
-import { Box, Flex, Button, Text } from "rebass";
-import SectionTwoTile1 from "./SectionTwoTile1";
-import SectionFourTile1 from "./SectionFourTile1";
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import React from 'react'
+import { Box, Flex, Button, Text } from 'rebass'
+import SectionTwoTile1 from './SectionTwoTile1'
+import SectionFourTile1 from './SectionFourTile1'
 
 interface SectionSixProps {}
 
@@ -10,16 +12,16 @@ class SectionSix extends React.Component<SectionSixProps, {}> {
     return (
       <Flex
         sx={{
-          flexWrap: "wrap",
-          backgroundColor: "black",
-          color: "white",
+          flexWrap: 'wrap',
+          backgroundColor: 'black',
+          color: 'white'
         }}
       >
         <Box
           sx={{
             flexGrow: 1,
             flexBasis: 512,
-            minHeight: "450px",
+            minHeight: '450px'
           }}
         >
           <SectionTwoTile1
@@ -28,21 +30,18 @@ class SectionSix extends React.Component<SectionSixProps, {}> {
             tileHeading="We Design Websites That Work"
             tileContent={
               <>
-                <p style={{ marginTop: "40px", lineHeight: "2.5rem" }}>
-                  Our passion, excellent listening skills and personalised touch
-                  help build a strong and unique rapport with our clients. This
-                  enables us to interpret the client’s vision from first meeting
-                  and ensures the client’s requirements are reflected in every
-                  stage of the graphic and web design process, always exceeding
-                  expectations.
+                <p style={{ marginTop: '40px', lineHeight: '2.5rem' }}>
+                  Our passion, excellent listening skills and personalised touch help build a strong and unique rapport with our clients.
+                  This enables us to interpret the client’s vision from first meeting and ensures the client’s requirements are reflected in
+                  every stage of the graphic and web design process, always exceeding expectations.
                 </p>
                 <Button
                   variant="outline"
                   sx={{
-                    marginTop: "20px",
-                    backgroundColor: "defaultBG",
-                    color: "white",
-                    fontWeight: "300",
+                    marginTop: '20px',
+                    backgroundColor: 'defaultBG',
+                    color: 'white',
+                    fontWeight: '300'
                   }}
                   href="/ui-design"
                   as="a"
@@ -57,13 +56,13 @@ class SectionSix extends React.Component<SectionSixProps, {}> {
           sx={{
             flexGrow: 1,
             flexBasis: 512,
-            minHeight: "450px",
+            minHeight: '450px'
           }}
         >
           <SectionFourTile1 imgUrl="section6_tile2_img.jpeg" />
         </Box>
       </Flex>
-    );
+    )
     /* return (
       <Box
         sx={{
@@ -141,4 +140,4 @@ class SectionSix extends React.Component<SectionSixProps, {}> {
   }
 }
 
-export default SectionSix;
+export default SectionSix

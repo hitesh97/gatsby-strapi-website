@@ -1,11 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
 import LayoutRoot from '../components/LayoutRoot'
-//import ArticlesComponent from '../components/Articles'
-import ReactMarkdown from 'react-markdown'
-import gfm from 'remark-gfm'
+// import ArticlesComponent from '../components/Articles'
+// import ReactMarkdown from 'react-markdown'
+// import gfm from 'remark-gfm'
 import TopHeroSection from '../home/TopHeroSection'
+import SectionOne from '../home/SectionOne'
+import SectionTwo from '../home/SectionTwo'
+import SectionThree from '../home/SectionThree'
+import SectionFour from '../home/SectionFour'
+import SectionFive from '../home/SectionFive'
+import SectionSix from '../home/SectionSix'
+import SectionSeven from '../home/SectionSeven'
+import SectionEight from '../home/SectionEight'
 
 interface CategoryProps {
   data: {
@@ -50,17 +57,14 @@ const SitePage: React.FC<CategoryProps> = ({ data }) => {
   return (
     <LayoutRoot>
       <TopHeroSection />
-      <div>
-        <div>
-          <h1>{pageTitle}</h1>
-          <ReactMarkdown
-            plugins={[gfm]}
-            children={pageSubtitle}
-            renderers={{ em: props => <li {...props}>hello world</li>, paragraph: props => props.children }}
-          />
-          <ReactMarkdown plugins={[gfm]} children={content} />
-        </div>
-      </div>
+      <SectionOne />
+      <SectionTwo />
+      <SectionThree />
+      <SectionFour />
+      <SectionFive />
+      <SectionSix />
+      <SectionSeven />
+      <SectionEight />
     </LayoutRoot>
   )
 }
