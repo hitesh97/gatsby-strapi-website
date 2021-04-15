@@ -55,8 +55,8 @@ const Category: React.FC<CategoryProps> = ({ data }) => {
 
   return (
     <LayoutRoot>
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
+      <div>
+        <div>
           <h1>{category}</h1>
           <ArticlesComponent articles={articles} />
         </div>

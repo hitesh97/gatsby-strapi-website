@@ -26,6 +26,8 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.12",
+    "@types/rebass": "^4.0.8",
+    "@types/styled-components": "^5.1.9",
     "babel-plugin-styled-components": "^1.10.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.10.0",
@@ -46,6 +48,7 @@
     "gatsby-transformer-json": "^2.2.0",
     "gatsby-transformer-remark": "^2.5.0",
     "gatsby-transformer-sharp": "^2.2.0",
+    "modern-css-reset": "^1.4.0",
     "modern-normalize": "^0.5.0",
     "moment": "^2.27.0",
     "normalize.css": "^8.0.1",
@@ -55,12 +58,15 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-icons": "^4.2.0",
     "react-markdown": "^5.0.3",
     "react-moment": "^0.9.7",
+    "rebass": "^4.0.7",
     "remark-gfm": "^1.0.0",
     "styled-components": "^5.2.3",
     "styled-system": "^5.1.5",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "use-media": "^1.4.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.8",

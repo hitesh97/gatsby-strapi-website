@@ -1,22 +1,43 @@
 import * as React from 'react'
 import Seo from './Seo'
-import Header from './Header'
-import { Global, css } from '@emotion/core'
-// import styled from '@emotion/styled'
-import normalize from '../styles/normalize'
+// import Header from './Header'
+import { ThemeProvider } from 'styled-components'
+import { theme, GlobalStyles } from '../styles'
+import { Box } from 'rebass'
+import SiteHeader from './SiteHeader'
+import SiteFooter from './SiteFooter'
 
 interface LayoutRootProps {
   className?: string
   title?: string
 }
 
-const LayoutRoot: React.FC<LayoutRootProps> = ({ children, className, title }) => (
-  <>
-    <Seo />
-    <Global styles={() => css(normalize)} />
-    <Header title={title} />
-    <main>{children}</main>
-  </>
+const LayoutRoot: React.FC<LayoutRootProps> = ({ children }) => (
+  <ThemeProvider theme={theme()}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh'
+      }}
+    >
+      <GlobalStyles />
+      <Seo />
+      <Box sx={{}}>
+        <SiteHeader isSticky={true} />
+      </Box>
+      <Box
+        sx={{
+          flex: '1 1 auto'
+        }}
+      >
+        {children}
+      </Box>
+      <Box sx={{}}>
+        <SiteFooter />
+      </Box>
+    </Box>
+  </ThemeProvider>
 )
 
 export default LayoutRoot

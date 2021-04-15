@@ -59,26 +59,17 @@ const Article: React.FC<ArticleProps> = ({ data }) => {
   return (
     <LayoutRoot>
       <div>
-        <div
-          id="banner"
-          className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-        >
-          <Img className="banner-bg" fixed={article.image.childImageSharp.fixed} />
-          <h1 className="uk-position-z-index">{article.title}</h1>
+        <div id="banner">
+          <Img fixed={article.image.childImageSharp.fixed} />
+          <h1>{article.title}</h1>
         </div>
 
-        {/* <div className="uk-section">
-        <div className="uk-container uk-container-small">
-        <ReactMarkdown source={article.content} />
-        </div>
-      </div> */}
-
-        <div className="uk-section">
-          <div className="uk-container uk-container-small">
+        <div>
+          <div>
             <ReactMarkdown source={article.content} />
           </div>
         </div>
-        <div className="uk-section">
+        <div>
           {/* <Img fixed={article.image.localFile.childImageSharp.fixed} /> */}
           {/* <img src={article.image.localFile.url} height="600" /> */}
         </div>

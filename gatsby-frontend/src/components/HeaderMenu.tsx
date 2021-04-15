@@ -1,10 +1,5 @@
 import * as React from 'react'
-// import styled from '@emotion/styled'
-// import { transparentize } from 'polished'
 import { Link, StaticQuery, graphql } from 'gatsby'
-
-// import { heights, dimensions, colors } from '../styles/variables'
-// import Container from './Container'
 
 interface headerMenuInterface {
   node: {
@@ -27,8 +22,8 @@ interface HeaderProps {}
 
 const HeaderMenu: React.FC<HeaderProps> = ({}) => {
   return (
-    <div className="uk-navbar-left">
-      <ul className="uk-navbar-nav">
+    <div>
+      <ul>
         <StaticQuery
           query={graphql`
             query {

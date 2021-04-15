@@ -1,17 +1,9 @@
 import * as React from 'react'
-// import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
 import 'modern-normalize'
-import '../styles/normalize'
-
-// import Header from '../components/Header'
 import LayoutRoot from '../components/LayoutRoot'
-// import LayoutMain from '../components/LayoutMain'
-
 import ArticlesComponent from '../components/Articles'
 import { Article } from '../typings'
-
 interface StaticQueryProps {
   site: {
     siteMetadata: {
@@ -64,8 +56,8 @@ const IndexLayout: React.FC<Props> = ({ children }) => (
     `}
     render={(data: StaticQueryProps) => (
       <LayoutRoot title={data.site.siteMetadata.title}>
-        <div className="uk-section">
-          <div className="uk-container uk-container-large">
+        <div>
+          <div>
             <h1>{data.site.siteMetadata.title}</h1>
             <ArticlesComponent articles={data.allStrapiArticle.edges} />
           </div>

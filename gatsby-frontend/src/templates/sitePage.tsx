@@ -48,8 +48,8 @@ const SitePage: React.FC<CategoryProps> = ({ data }) => {
 
   return (
     <LayoutRoot>
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
+      <div>
+        <div>
           <h1>{pageTitle}</h1>
           <ReactMarkdown
             plugins={[gfm]}
