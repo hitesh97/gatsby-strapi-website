@@ -25,34 +25,18 @@ interface headerMenuInterface {
   }
 }
 
-const SiteHeader: FunctionComponent<{ isSticky?: boolean }> = ({ isSticky = false }) => {
-  const [scrolled, setScrolled] = useState(false)
-  const handleScroll = () => {
-    const offset = window.scrollY
-    if (offset > 0.1) {
-      setScrolled(true)
-    } else {
-      setScrolled(false)
-    }
-  }
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  })
-
+const SiteHeader: FunctionComponent<{}> = ({}) => {
   return (
     <Flex
       sx={{
         flexWrap: 'wrap',
         color: 'white',
         padding: 2,
-        position: `${isSticky ? 'sticky' : scrolled ? 'fixed' : ''}`,
-        top: 0,
         width: '100%',
         backgroundColor: 'siteSecondaryBG',
-        boxShadow: `${scrolled ? '0 2px 6px rgba(0,0,0,0.2)' : ''}`,
         paddingRight: '60px',
-        paddingLeft: '60px'
+        paddingLeft: '60px',
+        boxShadow: '0 2px 6px rgba(0,0,0,0.2)'
       }}
     >
       <Box

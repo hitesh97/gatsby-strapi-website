@@ -49,22 +49,26 @@ export const query = graphql`
 `
 
 const SitePage: React.FC<CategoryProps> = ({ data }) => {
-  // const pageSlug = data.allStrapiPage.edges[0].node.slug
+  const pageSlug = data.allStrapiPage.edges[0].node.slug
   const pageTitle = data.allStrapiPage.edges[0].node.title
   const pageSubtitle = data.allStrapiPage.edges[0].node.introText
   const content = data.allStrapiPage.edges[0].node.content
 
   return (
     <LayoutRoot>
-      <TopHeroSection />
-      <SectionOne />
-      <SectionTwo />
-      <SectionThree />
-      <SectionFour />
-      <SectionFive />
-      <SectionSix />
-      <SectionSeven />
-      <SectionEight />
+      {pageSlug === 'home' && (
+        <>
+          <TopHeroSection />
+          <SectionOne />
+          <SectionTwo />
+          <SectionThree />
+          <SectionFour />
+          <SectionFive />
+          <SectionSix />
+          <SectionSeven />
+          <SectionEight />
+        </>
+      )}
     </LayoutRoot>
   )
 }

@@ -23,8 +23,8 @@ const LayoutRoot: React.FC<LayoutRootProps> = ({ children }) => (
     >
       <GlobalStyles />
       <Seo />
-      <Box sx={{}}>
-        <SiteHeader isSticky={true} />
+      <Box sx={{}} style={{ backgroundColor: 'white', position: 'sticky', top: '0px', left: '0px' }}>
+        <SiteHeader />
       </Box>
       <Box
         sx={{

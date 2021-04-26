@@ -127,7 +127,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const articles = result.data.articles.edges
   const categories = result.data.categories.edges
   const sitePages = result.data.sitePages.edges
-
+  console.log('------ site pages -------');
+  console.log(sitePages[0].node.menuItem.page.slug);
+  console.log('------ site pages -------');
   articles.forEach((article, index) => {
     createPage({
       path: `/article/${article.node.strapiId}`,
@@ -150,7 +152,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   sitePages.forEach((sitePage, index) => {
     createPage({
-      path: `/${sitePage.node.menuItem.page.slug}`,
+      path: `${sitePage.node.menuItem.page.slug}`,
       component: require.resolve('./src/templates/pageTemplate.tsx'),
       context: {
         slug: sitePage.node.menuItem.page.slug
